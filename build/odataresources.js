@@ -678,6 +678,10 @@ factory('$odataProvider', ['$odataOperators', '$odataBinaryOperation', '$odataPr
             return this;
         };
 
+         ODataProvider.prototype.getUrl = function(){
+             return this.excute();
+         };
+
         var expandOdatav4 = function(navigationProperties){
         	var first = navigationProperties.shift();
         	var current = first;
